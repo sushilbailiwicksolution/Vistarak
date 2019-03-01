@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="15dp"
+    android:background="@drawable/shape">
+
+    <LinearLayout
+        android:id="@+id/linearlayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/popup_txt_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Logout"
+            android:textColor="@color/white"
+            android:textSize="15sp"></TextView>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearlayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearlayout1"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_mesage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Do You Want To Logout ?"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearlayout2"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_margin="3dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+
+            android:background="@drawable/ripple_button"
+            android:text="Logut"
+            android:textColor="#000"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btn_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_margin="3dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+
+            android:background="@drawable/ripple_button"
+            android:text="Exit"
+            android:textColor="#000"
+            android:textSize="15sp" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

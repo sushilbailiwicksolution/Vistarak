@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Hindi">
+        <item>यूजर नेम</item>
+        <item>पासवर्ड</item>
+        <item>साइन इन करें</item>
+        <item>सबमिट करें</item>
+        <item>आपके पंजीकृत मोबाइल नंबर से प्राप्त ओटीपी दर्ज करें</item>
+        <item>(कृपया अपना ओटीपी दर्ज करें)</item>
+        <item>न्यू मेंबर</item>
+        <item>SC/ST एरिया </item>
+        <item>मन की बात प्रमुख</item>
+        <item>Key वोटर </item>
+        <item>रिकॉर्ड एक्टिविटी</item>
+        <item>मेसेज लिखो</item>
+        <item>ग्रह प्रवास </item>
+        <item>बूथ बैठक</item>
+        <item>मन की बात प्रमुख</item>
+        <item>Key वोटर ग्रुप</item>
+        <item>डाउनलोड</item>
+        <item>व्हाट्सएप ग्रुप</item>
+        <item>स्वच्छता प्रमुख</item>
+        <item>मोटरसाइकिल</item>
+        <item>मेसेज..</item>
+        <item>लागू करें</item>
+        <item>रद्द करें</item>
+        <item>पूरा नाम</item>
+        <item>मोबाइल नंबर</item>
+        <item>अविवाहित</item>
+        <item>विवाहित</item>
+        <item>दिन</item>
+        <item>महीना</item>
+        <item>साल</item>
+        <item>जन्म तिथि</item>
+        <item>पता1</item>
+        <item>ओटीपी</item>
+        <item>सदस्य जोड़ें</item>
+        <item>परिवार के मुखिया</item>
+        <item>परिवार के सदस्य</item>
+        <item>परिवार में मतदाता</item>
+        <item>पता</item>
+        <item>नया रिकॉर्ड</item>
+        <item>पूर्व सदस्य</item>
+        <item>पुस्र्ष</item>
+        <item>महिला</item>
+        <item>कुल</item>
+        <item>सभा की तस्वीर अपलोड करें</item>
+        <item>ग्रुप का नाम</item>
+        <item>ग्रुप के मुखिया का नाम</item>
+        <item>कार्य का प्रकार</item>
+        <item>सेना के जवान का नाम</item>
+        <item>शहीद का नाम</item>
+        <item>परिवार के मुखिया का मोबाइल नंबर</item>
+        <item>शहीद का विवरण</item>
+        <item>व्यक्ति का नाम</item>
+        <item>व्यवसाय</item>
+        <item>डाउनलोड के लिए धन्यवाद</item>
+        <item>क्षेत्र का नाम</item>
+        <item>परिवार में सदस्यों की संख्या</item>
+        <item>स्थान</item>
+        <item>ग्रुप का प्रमुख</item>
+        <item>प्रमुख का मोबाइल नंबर</item>
+        <item>स्वच्छता प्रमुख</item>
+        <item>वाहन</item>
+        <item>कुल मोटरसाइकिल</item>
+        <item>व्यक्ति का नाम</item>
+        <item>वाहन संख्या</item>
+        <item>कृपया बूथ का चयन करें</item>
+        <item>आवश्यक क्षेत्र</item>
+        <item>लोड हो रहा है…</item>
+        <item>कृपया प्रतीक्षा करें…</item>
+        <item>ट्रैकिंग सफलतापूर्वक शुरू हुई</item>
+
+
+        // Add on 26 feb 2018
+
+        <item>सदस्यता संख्या</item>
+
+
+        <item>स्मार्टफोन यूजर्स</item>
+        <item>बूथ कमेटी </item>
+
+
+        <item>बूथ पालक</item>
+        <item>बी.एल.ए 2</item>
+        <item>बूथ अध्यक्ष</item>
+
+        <item>अध्यक्ष नाम</item>
+        <item>अध्यक्ष मोबाइल</item>
+        <item>पालक नाम</item>
+        <item>पालक मोबाइल</item>
+        <item> बी एल ए का नाम</item>
+        <item>बी.एल.ए मोबाइल</item>
+
+        <item>मोबाइल नंबर</item>
+        <item>कुल स्मार्ट फोन उपयोगकर्ता</item>
+
+        <!--20 -03-2018-->
+        <item>Amount</item>
+        <item>Tittle</item>
+        <item>Description</item>
+        <item>Upload Bill</item>
+    </string-array>
+</resources>

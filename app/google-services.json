@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "352661202442",
+    "firebase_url": "https://vistarak-8c76d.firebaseio.com",
+    "project_id": "vistarak-8c76d",
+    "storage_bucket": "vistarak-8c76d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:352661202442:android:6bc606121afc61ee",
+        "android_client_info": {
+          "package_name": "bailiwick.bjpukh.com.vistarak"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "352661202442-s8gqt3mnnrk7csna8g3mv9mbdqbquh43.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "bailiwick.bjpukh.com.vistarak",
+            "certificate_hash": "0779a9b080b621b9d0ea5cfdd13fedb0be28f80c"
+          }
+        },
+        {
+          "client_id": "352661202442-1e7t400gs6igc4hs50iag6b5b31j20h6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "bailiwick.bjpukh.com.vistarak",
+            "certificate_hash": "d972f441509e8f6e18fb746977141bb67c136001"
+          }
+        },
+        {
+          "client_id": "352661202442-m4ki16nf5o2qih3m2eihg10n15sohnuc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1Ll-jFFcQ1S6ccRJbW6JHJGxKtI-Cpp8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "352661202442-m4ki16nf5o2qih3m2eihg10n15sohnuc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

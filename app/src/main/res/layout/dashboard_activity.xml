@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    android:background="@drawable/cck"
+
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/patch_header"
+
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content">
+
+                <!--<ImageView
+                    android:id="@+id/img_profile_Image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_login" />-->
+
+                <TextView
+                    android:id="@+id/tracking_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/ripple_button"
+                    android:padding="5dp"
+                    android:text="Tracking Details"
+                    android:textSize="12dp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Sushil Naresh"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+
+                <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/start_location_updates"
+                    style="@style/SwitchButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:textSize="16dp"
+                    app:kswBackColor="#fff"
+                    app:kswBackMeasureRatio="2.2"
+                    app:kswTextOff="Start Track"
+                    app:kswTextOn="Stop Track"
+                    app:kswThumbColor="#3bb91b"
+
+                    app:kswTintColor="#3bb91b" />
+
+                <Button
+                    android:id="@+id/btn_leave"
+                    android:layout_width="115dp"
+                    android:layout_height="26dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ripple_button"
+                    android:gravity="center"
+                    android:text="Leave"
+
+                    android:textColor="@color/white" />
+
+
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/spinner_select_booth"
+                style="@style/mySpinnerStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="4dp"
+                android:layout_toRightOf="@+id/txt_txt_voter"
+                android:layout_weight="1"
+                android:background="@drawable/spnr_selector"
+                android:paddingLeft="7dp"
+                android:popupBackground="@color/white" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <!--Row one item 1-->
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/crd_booth_visit"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+
+                        android:elevation="8dp"
+                        card_view:cardCornerRadius="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:padding="5dp">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top"
+                                    android:padding="10dp"
+
+                                    android:src="@drawable/ic_dash_home" />
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="Booth Visit and \n new Member"
+                                    android:textColor="@color/color_black"
+                                    android:textSize="15sp" />
+
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+                    <!--Row one item 2-->
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/crd_home_visit"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:elevation="8dp"
+                        card_view:cardCornerRadius="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:padding="5dp">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top"
+                                    android:padding="10dp"
+
+                                    android:src="@drawable/ic_home" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="Home Visit"
+                                    android:textColor="@color/color_black"
+                                    android:textSize="15sp" />
+
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <!--Row one item 1-->
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/crd_meeting_in_booth"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+
+                        android:elevation="8dp"
+                        card_view:cardCornerRadius="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:padding="5dp">
+
+
+                            <LinearLayout
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top"
+                                    android:padding="10dp"
+
+                                    android:src="@drawable/ic_meeting" />
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="Meeting in the \n Booth"
+                                    android:textColor="@color/color_black"
+                                    android:textSize="15sp" />
+
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+                    <!--Row one item 2-->
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/crd_benificary"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:elevation="8dp"
+                        card_view:cardCornerRadius="10dp">
+
+                        <RelativeLayout
+                            android:id="@+id/relativeLayout_bookingHistory"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:padding="5dp">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top"
+                                    android:padding="10dp"
+
+                                    android:src="@drawable/ic_benificary" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="Benificiary of \n Scheme"
+                                    android:textColor="@color/color_black"
+                                    android:textSize="15sp" />
+
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <!--Row one item 1-->
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/key_voter_group"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+
+                        android:elevation="8dp"
+                        card_view:cardCornerRadius="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:padding="5dp">
+
+
+                            <LinearLayout
+                                android:id="@+id/relativeLayout_secondLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top"
+                                    android:padding="10dp"
+
+                                    android:src="@drawable/ic_key_voter" />
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="Key Voter Group"
+                                    android:textColor="@color/color_black"
+                                    android:textSize="15sp" />
+
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+                    <!--Row one item 2-->
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/crd_download"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:elevation="8dp"
+                        card_view:cardCornerRadius="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:padding="5dp">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top"
+                                    android:padding="10dp"
+
+                                    android:src="@drawable/ic_download" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="Downloads"
+                                    android:textColor="@color/color_black"
+                                    android:textSize="15sp" />
+
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <!--Row one item 1-->
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/crd_special_area"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+
+                        android:elevation="8dp"
+                        card_view:cardCornerRadius="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:padding="5dp">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top"
+                                    android:padding="10dp"
+
+                                    android:src="@drawable/ic_special_area" />
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="Dalit/Backward\n (SC/ST)"
+                                    android:textColor="@color/color_black"
+                                    android:textSize="15sp" />
+
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+                    <!--Row one item 2-->
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/crd_wts_app_group"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:elevation="8dp"
+                        card_view:cardCornerRadius="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:padding="5dp">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top"
+                                    android:padding="10dp"
+
+                                    android:src="@drawable/ic_dalit" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="Whats App group"
+                                    android:textColor="@color/color_black"
+                                    android:textSize="15sp" />
+
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <!--Row one item 1-->
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/crd_swachta"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+
+                        android:elevation="8dp"
+                        card_view:cardCornerRadius="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:padding="5dp">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top"
+                                    android:padding="10dp"
+
+                                    android:src="@drawable/ic_swachta" />
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="Swachta in Booth"
+                                    android:textColor="@color/color_black"
+                                    android:textSize="15sp" />
+
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+                    <!--Row one item 2-->
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/crd_man_ki_baat"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:elevation="8dp"
+                        card_view:cardCornerRadius="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:padding="5dp">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top"
+                                    android:padding="10dp"
+
+                                    android:src="@drawable/ic_man_ki_baat" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="Man Ki Baat"
+                                    android:textColor="@color/color_black"
+                                    android:textSize="15sp" />
+
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

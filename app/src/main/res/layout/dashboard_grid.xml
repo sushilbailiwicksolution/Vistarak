@@ -1,0 +1,895 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!--Row one item 1-->
+            <android.support.v7.widget.CardView
+                android:id="@+id/crd_booth_visit"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:elevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/box_selector"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center|top"
+                            android:layout_weight="1"
+                            android:padding="0dp"
+                            android:src="@drawable/user" />
+
+                        <TextView
+                            android:id="@+id/new_member"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/dash_board_bottom_margin"
+                            android:gravity="center"
+                            android:text="New Member"
+                            android:textColor="@color/color_black"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+            <!--Row one item 2-->
+            <android.support.v7.widget.CardView
+                android:id="@+id/crd_home_visit"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:elevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/box_selector"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center|top"
+                            android:layout_weight="1"
+                            android:padding="0dp"
+                            android:src="@drawable/visit_home" />
+
+                        <TextView
+                            android:id="@+id/home_visit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/dash_board_bottom_margin"
+                            android:gravity="center"
+                            android:text="Home Visit"
+                            android:textColor="@color/color_black"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:orientation="horizontal">
+            <!--Row one item 1-->
+            <android.support.v7.widget.CardView
+                android:id="@+id/crd_meeting_in_booth"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:elevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/box_selector"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center|top"
+                            android:layout_weight="1"
+                            android:padding="0dp"
+                            android:src="@drawable/star" />
+
+                        <TextView
+                            android:id="@+id/tv_booth_meeting"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/dash_board_bottom_margin"
+                            android:gravity="center"
+                            android:text="Booth Meeting"
+                            android:textColor="@color/color_black"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+            <!--Row one item 2-->
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/crd_man_ki_baat"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+
+                android:elevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:background="@drawable/box_selector"
+                    android:padding="5dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center|top"
+                            android:layout_weight="1"
+                            android:padding="0dp"
+
+                            android:src="@drawable/mike" />
+
+                        <TextView
+                            android:id="@+id/tv_man_ki_bat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/dash_board_bottom_margin"
+                            android:gravity="center"
+                            android:text="Man Ki Baat"
+                            android:textColor="@color/color_black"
+                            android:textSize="15sp" />
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:orientation="horizontal">
+            <!--Row one item 1-->
+            <android.support.v7.widget.CardView
+                android:id="@+id/key_voter_group"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="1dp"
+
+                android:layout_weight="1"
+                android:elevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/box_selector"
+                    android:padding="5dp">
+
+
+                    <LinearLayout
+                        android:id="@+id/relativeLayout_secondLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center|top"
+                            android:layout_weight="1"
+                            android:padding="0dp"
+
+                            android:src="@drawable/group" />
+
+                        <TextView
+                            android:id="@+id/tv_key_voter_group"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/dash_board_bottom_margin"
+                            android:gravity="center"
+                            android:text="Key Voter Group"
+                            android:textColor="@color/color_black"
+                            android:textSize="15sp" />
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <!--Row one item 2-->
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/crd_download"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+
+                android:elevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/box_selector"
+                    android:padding="5dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center|top"
+                            android:layout_weight="1"
+                            android:padding="0dp"
+
+                            android:src="@drawable/download" />
+
+                        <TextView
+                            android:id="@+id/tv_downloads"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/dash_board_bottom_margin"
+                            android:gravity="center"
+                            android:text="Downloads"
+                            android:textColor="@color/color_black"
+                            android:textSize="15sp" />
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+
+            android:orientation="horizontal">
+            <!--Row one item 1-->
+            <android.support.v7.widget.CardView
+                android:id="@+id/crd_special_area"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+
+                android:elevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/box_selector"
+                    android:padding="5dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center|top"
+                            android:layout_weight="1"
+                            android:padding="0dp"
+
+                            android:src="@drawable/map" />
+
+                        <TextView
+                            android:id="@+id/tv_sc_area"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/dash_board_bottom_margin"
+                            android:gravity="center"
+                            android:text="SC/ST Area"
+                            android:textColor="@color/color_black"
+                            android:textSize="15sp" />
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <!--Row one item 2-->
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/crd_wts_app_group"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+
+                android:elevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/box_selector"
+                    android:padding="5dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center|top"
+                            android:layout_marginBottom="@dimen/dash_board_bottom_margin"
+                            android:layout_weight="1"
+                            android:padding="0dp"
+                            android:src="@drawable/whtsapp" />
+
+                        <TextView
+                            android:id="@+id/tv_whatsapp_area"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/dash_board_bottom_margin"
+                            android:gravity="center"
+                            android:text="Whats App group"
+                            android:textColor="@color/color_black"
+                            android:textSize="15sp" />
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:orientation="horizontal">
+            <!--Row one item 1-->
+            <android.support.v7.widget.CardView
+                android:id="@+id/crd_swachta"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+
+
+                android:elevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/box_selector"
+                    android:padding="5dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center|top"
+                            android:layout_weight="1"
+                            android:padding="0dp"
+
+                            android:src="@drawable/gogi" />
+
+                        <TextView
+                            android:id="@+id/tv_swachhta_in_booth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/dash_board_bottom_margin"
+                            android:gravity="center"
+                            android:text="Swachta in Booth"
+                            android:textColor="@color/color_black"
+                            android:textSize="15sp" />
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <!--Row one item 2-->
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/crd_log_out"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:elevation="8dp"
+
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/box_selector"
+                    android:padding="5dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center|top"
+                            android:layout_weight="1"
+                            android:padding="15dp"
+
+                            android:src="@drawable/bike" />
+
+                        <TextView
+                            android:id="@+id/tv_motor_cycle_in_booth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/dash_board_bottom_margin"
+                            android:gravity="center"
+                            android:text="Motor Cycle in Booth"
+                            android:textColor="@color/color_black"
+                            android:textSize="15sp" />
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <!--Camettie And Smart User-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:orientation="horizontal">
+            <!--Row one item 1-->
+            <android.support.v7.widget.CardView
+                android:id="@+id/crd_cometiee"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+
+
+                android:elevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/box_selector"
+                    android:padding="5dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center|top"
+                            android:layout_weight="1"
+                            android:padding="0dp"
+
+                            android:src="@drawable/ic_kameti" />
+
+                        <TextView
+                            android:id="@+id/txt_booth_kameti"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/dash_board_bottom_margin"
+                            android:gravity="center"
+                            android:text="Booth Tri Shakti"
+                            android:textColor="@color/color_black"
+                            android:textSize="15sp" />
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <!--Row one item 2-->
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/crd_smart_user"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:elevation="8dp"
+
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/box_selector"
+                    android:padding="5dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center|top"
+                            android:layout_weight="1"
+                            android:padding="15dp"
+
+                            android:src="@drawable/ic_smart_phone" />
+
+                        <TextView
+                            android:id="@+id/txt_smart_phone_user"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/dash_board_bottom_margin"
+                            android:gravity="center"
+                            android:text="Smart User Phone"
+                            android:textColor="@color/color_black"
+                            android:textSize="15sp" />
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:orientation="horizontal">
+            <!--Row one item 1-->
+            <android.support.v7.widget.CardView
+                android:id="@+id/crd_pradhan"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:elevation="8dp"
+
+
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/box_selector"
+                    android:padding="5dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center|top"
+                            android:layout_weight="1"
+                            android:padding="0dp"
+
+                            android:src="@drawable/pradhan_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/dash_board_bottom_margin"
+                            android:gravity="center"
+                            android:text="Panna Pramukh"
+                            android:textColor="@color/color_black"
+                            android:textSize="15sp" />
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <!--Row one item 2-->
+            <android.support.v7.widget.CardView
+                android:id="@+id/crd_anusuchit"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:elevation="8dp"
+
+
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/box_selector"
+                    android:padding="5dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center|top"
+                            android:layout_weight="1"
+                            android:padding="0dp"
+
+                            android:src="@drawable/sc_st" />
+
+                        <TextView
+                            android:id="@+id/txt_anusuchit"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/dash_board_bottom_margin"
+                            android:gravity="center"
+                            android:text="Anushuchit Sadasya "
+                            android:textColor="@color/color_black"
+                            android:textSize="15sp" />
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:orientation="horizontal">
+            <!--Row one item 1-->
+            <android.support.v7.widget.CardView
+                android:id="@+id/crd_event_president"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:elevation="8dp"
+
+
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/box_selector"
+                    android:padding="5dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <ImageView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center|top"
+                            android:layout_weight="1"
+                            android:padding="0dp"
+
+                            android:src="@drawable/event_add1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/dash_board_bottom_margin"
+                            android:gravity="center"
+                            android:text="Booth karyakram Pramukh"
+                            android:textColor="@color/color_black"
+                            android:textSize="15sp" />
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <!--Row one item 2-->
+            <android.support.v7.widget.CardView
+                android:id="@+id/crd_comitee_21"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+
+                android:layout_gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:elevation="8dp"
+
+
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/box_selector"
+                    android:padding="5dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center|top"
+                            android:layout_weight="1"
+                            android:padding="0dp"
+
+                            android:src="@drawable/comite21" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/dash_board_bottom_margin"
+                            android:gravity="center"
+                            android:text="Booth Comitee"
+                            android:textColor="@color/color_black"
+                            android:textSize="15sp" />
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

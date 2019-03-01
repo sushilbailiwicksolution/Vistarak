@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="English">
+        <item>Username</item>
+        <item>Password</item>
+        <item>Sign In</item>
+        <item>Submit</item>
+        <item>Enter the otp Send to your Registred Mobile</item>
+        <item>(Please enter your OTP )</item>
+        <item>New Member</item>
+        <item>SC/ST Area</item>
+        <item>Man Ki Baat Pramukh</item>
+        <item>Key Voter</item>
+        <item>Record Activity</item>
+        <item>Write Message</item>
+        <item>Home Visit</item>
+        <item>Booth Meeting</item>
+        <item>Man Ki Baat</item>
+        <item>Key Voter Group</item>
+        <item>Downloads</item>
+        <item>WhatsApp Group</item>
+        <item>Swacchta in Booth</item>
+        <item>Motor Cycle in Booth</item>
+        <item>Message…</item>
+        <item>Apply</item>
+        <item>Cancel</item>
+        <item>Full Name</item>
+        <item>Mobile</item>
+        <item>Single</item>
+        <item>Married</item>
+        <item>DD</item>
+        <item>MM</item>
+        <item>YYYY</item>
+        <item>D.O.B</item>
+        <item>Address1</item>
+        <item>OTP</item>
+        <item>Add Member</item>
+        <item>Head of Family</item>
+        <item>Family Members</item>
+        <item>Voters in Family</item>
+        <item>Address</item>
+        <item>New Record</item>
+        <item>Old Member</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Total</item>
+        <item>Pic Upload of Sabha</item>
+        <item>Group Name</item>
+        <item>Name Of Owner</item>
+        <item>Area Of Work</item>
+        <item>Name Of Army Person</item>
+        <item>Name Of Shaheed</item>
+        <item>Mobile No. Of Family</item>
+        <item>Work in Detail</item>
+        <item>Person Name</item>
+        <item>Occupation</item>
+        <item>Thanks For Download</item>
+        <item>Name Of Area</item>
+        <item>Family Count</item>
+        <item>Location</item>
+        <item>Group Admin</item>
+        <item>Admin Contact No.</item>
+        <item>Swachhta Pramukh</item>
+        <item>Vehicle</item>
+        <item>Total Motor Bike</item>
+        <item>Name Of Person</item>
+        <item>Vehicle Number</item>
+        <item>Please Select Booth</item>
+        <item>Required Field</item>
+        <item>Loading…</item>
+        <item>Please Wait…</item>
+        <item>Tracking Started Successfully</item>
+
+        <!--        New String add on 26 feb 2018-->
+        <item>Member Ship Number</item>
+
+        <item>Smart Phone User</item>
+        <item>Booth Tri Shakti</item>
+
+        <item>Booth Palak</item>
+        <item>B.L.A 2</item>
+        <item>Booth Adhyaksh</item>
+
+        <item>Adhyaksh Name</item>
+        <item>Adhyaksh Mobile</item>
+        <item>Palak Name</item>
+        <item>Palak Mobile</item>
+        <item>B.L.A Name</item>
+        <item>B.L.A Mobile</item>
+
+        <item>Contact</item>
+        <item>Total Smart Phone User</item>
+    <!--// 20/03/2018-->
+        <item>Amount</item>
+        <item>Tittle</item>
+        <item>Description</item>
+        <item>Upload Bill</item>
+    </string-array>
+</resources>

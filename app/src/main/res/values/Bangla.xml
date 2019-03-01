@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Bangla">
+
+
+        <item>ইউজার নেম </item>
+        <item>পাসওয়ার্ড</item>
+        <item>সাইন ইন  </item>
+        <item>সাবমিট </item>
+        <item>        আপনার রেজিস্টার্ড  মোবাইলে যে ওটিপি  গেছে সেটি প্রদান করুন</item>
+        <item>(আপনার  ওটিপি  প্রদান করুন )</item>
+        <item>নতুন সদস্য</item>
+        <item>বিশেষ জায়গা </item>
+        <item>মন কি বাত প্রমুখ</item>
+        <item>গুরুত্বপূর্ণ ভোটার </item>
+        <item>রেকর্ড আক্টিভিটি</item>
+        <item>মেসেজ লিখুন</item>
+        <item>গৃহ পরিদর্শন</item>
+        <item>বুথ মিটিং</item>
+        <item>মন কি বাত</item>
+        <item>গুরুত্বপূর্ণ ভোটার গ্রুপ </item>
+        <item>ডাউনলোডস</item>
+        <item>হোয়াটস অ্যাপ গ্রুপ </item>
+        <item>বুথএ স্বচ্ছতা </item>
+        <item>বুথএ মোটর সাইকেল</item>
+        <item>েসেজ...</item>
+        <item>অ্যাপলাই </item>
+        <item>ক্যানসেল</item>
+        <item>পুরো নাম</item>
+        <item>মোবাইল</item>
+        <item>সিঙ্গেল </item>
+        <item>বিবাহিত</item>
+        <item>ডিডি</item>
+        <item>এমএম</item>
+        <item>ওয়াইওয়াইওয়াইওয়াই</item>
+        <item>জন্ম তারিখ</item>
+        <item>ঠিকানা১</item>
+        <item>ওটিপি</item>
+        <item>নতুন সদস্য যোগদান</item>
+        <item>পরিবারের প্রধান</item>
+        <item>পরিবারের সদস্য সংখ্যা</item>
+        <item>পরিবারে ভোটার সংখ্যা </item>
+        <item>ঠিকানা</item>
+        <item>নতুন নথি</item>
+        <item>পুরোনো সদ্যস</item>
+        <item>পুরুষ</item>
+        <item>স্ত্রী</item>
+        <item>মোট</item>
+        <item>সভার ছবি আপলোড  </item>
+        <item>গ্রুপ নাম</item>
+        <item>মালিকের নাম</item>
+        <item>কাজের জায়গা</item>
+        <item>সেনা বাহিনীতে কাজ করা মানুষের নাম</item>
+        <item>শহীদের নাম</item>
+        <item>পরিবারের মোবাইল নাম্বার </item>
+        <item>কাজের বিস্তারিত তথ্য</item>
+        <item>মানুষের নাম</item>
+        <item>জীবিকা</item>
+        <item>ডাউনলোড করার জন্য ধন্যবাদ</item>
+        <item>জায়গার নাম </item>
+        <item>পরিবারে সদ্যস সংখ্যা </item>
+        <item>জায়গা</item>
+
+        <item>গ্রুপ অ্যাডমিন</item>
+        <item> অ্যাডমিন এর কণ্ট্যাক্ট নাম্বার</item>
+        <item>স্বচ্ছতা প্রমুখ</item>
+        <item>গাড়ি</item>
+        <item>মোট মোটর সাইকেলএর সংখ্যা</item>
+        <item>মানুষের নাম</item>
+        <item>গাড়ির নাম্বার</item>
+        <item>বুথ নির্বাচন করুন</item>
+        <item>দরকারি ফিল্ড</item>
+        <item>লোডিং.....</item>
+        <item>অপেক্ষা করুন</item>
+        <item>সফলভাবে পর্যবেক্ষণ সুরু করা হলো</item>
+
+
+        <!--        New String add on 26 feb 2018-->
+        <item>সদস্যপদ সংখ্যা</item>
+
+        <item>স্মার্ট ফোন ব্যবহারকারী</item>
+        <item>Kameti সদস্য</item>
+        <item>বুথ পালক</item>
+        <item>বুথ বি এলএ</item>
+        <item>বুথ অধ্যক্ষ</item>
+        <item>অধ্যক্ষ নাম</item>
+        <item>অধ্যক্ষ মোবাইল</item>
+        <item>পালক নাম</item>
+        <item>পালাক মোবাইল</item>
+        <item>বি.এল.এ নাম</item>
+        <item>বিএলএ মোবাইল</item>
+        <item>মোবাইল নম্বর</item>
+        <item>মোট স্মার্ট ফোন ব্যবহারকারী</item>
+ <!--20 -03-2018-->
+        <item>Amount</item>
+        <item>Tittle</item>
+        <item>Description</item>
+        <item>Upload Bill</item>
+    </string-array>
+</resources>
