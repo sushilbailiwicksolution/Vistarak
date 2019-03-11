@@ -7,7 +7,7 @@
     <string name="action_settings">Setting</string>
     <string name="cancel">cancel</string>
     <string name="title_activity_maps">Map</string>
-    <string name="version_code">version 3.4</string>
+    <string name="version_code">version 3.7</string>
     <string name="old_login_tagline">Enter the otp Send to your Registred Mobile</string>
     <string name="msg_manual_otp">(Please enter your OTP )</string>
 

@@ -69,6 +69,8 @@ import bailiwick.bjpukh.com.vistarak.Dialog.LvCancelDialog;
 import bailiwick.bjpukh.com.vistarak.Firebase.MyFirebaseInstanceIDService;
 import bailiwick.bjpukh.com.vistarak.Firebase.WakeLocker;
 import bailiwick.bjpukh.com.vistarak.Getter_Setter.BoothSpinnerModal;
+import bailiwick.bjpukh.com.vistarak.Getter_Setter.District_model;
+import bailiwick.bjpukh.com.vistarak.Getter_Setter.Level_model;
 import bailiwick.bjpukh.com.vistarak.Language.TextUtils;
 import bailiwick.bjpukh.com.vistarak.LocationService.LocationService;
 import bailiwick.bjpukh.com.vistarak.Support.DeviceOperation;
@@ -110,6 +112,8 @@ public class Booth_record extends RootActivity {
     boolean backpressed;
     private Button btn_expensive;
 
+    ArrayList<District_model> DistrictModals;
+    ArrayList<Level_model> LevelModals;
 
     public static String encodeToBase64(Bitmap image, Bitmap.CompressFormat compressFormat) {
         ByteArrayOutputStream byteArrayOS = new ByteArrayOutputStream();
@@ -131,6 +135,7 @@ public class Booth_record extends RootActivity {
         GetNotifyMessage();
         registerReceiver(mHandlerReciver, new IntentFilter(Itag.DISPLAY_MESSAGE_ACTION));
         SavedData.saveNotify(true);
+        getDistrictDB();
 
     }
 
@@ -267,10 +272,10 @@ public class Booth_record extends RootActivity {
                             SavedData.setDBversion(database_version_code);
                             SavedData.setisDbUpated(false);
                             //here i have to clear database
-                            Log.e("check 6",""+database_version_code);
+                            Log.e("check 6", "" + database_version_code);
 
-                            Log.e("check 7",""+SavedData.getDBversion());
-                            Log.e("check 8",""+SavedData.isDBupdated());
+                            Log.e("check 7", "" + SavedData.getDBversion());
+                            Log.e("check 8", "" + SavedData.isDBupdated());
 
                             Log.e("clear db ", "clear db ");
 
@@ -312,7 +317,7 @@ public class Booth_record extends RootActivity {
                     }
 
                     update_profile();
-                    Log.e("check 1",""+SavedData.isDBupdated());
+                    Log.e("check 1", "" + SavedData.isDBupdated());
                     if (!SavedData.isDBupdated()) {
                         clearBooth();
                     }
@@ -580,8 +585,21 @@ public class Booth_record extends RootActivity {
 
     }
 
-    private void getBoothFromServer() {
-        prg.setMessage("Get Booth");
+    private void getDistrictDB() {
+        DistrictModals = DBOperation.getAllDistrict(this);
+        if (DistrictModals.size() > 0 && DistrictModals != null) {
+            Log.e("in Database Calling", "in Database Calling");
+
+            getLevleDB();
+        } else {
+            Log.e("Have to get from server", "Have to get from server");
+            getDistrictFromServer();
+        }
+    }
+
+
+    private void getDistrictFromServer() {
+        prg.setMessage("Get District");
         prg.show();
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, Utils_url.Base_Url, new Response.Listener<String>() {
@@ -592,12 +610,97 @@ public class Booth_record extends RootActivity {
                 Log.e("Response :", response);
                 //  Manage_data_login(response);
                 try {
-                    JSONObject jsonObject = new JSONObject(response);
-                    JSONArray boothArray = jsonObject.getJSONArray("boothDetails");
-                    for (int i = 0; i < boothArray.length(); i++) {
-                        boolean isSuccess = DBOperation.insertBooth(Booth_record.this, boothArray.getJSONObject(i).getString("bid"), boothArray.getJSONObject(i).getString("booth_name"), boothArray.getJSONObject(i).getString("consistency_name"));
+                    JSONObject jsdata = new JSONObject(response);
+                    String msg = jsdata.getString("msg");
+                    String status = jsdata.getString("status");
+                    SavedData.saveOperation_status(false);
 
-                        // Log.e("Success", "" + isSuccess);
+                    if (status.equalsIgnoreCase("1")) {
+                        JSONArray jsAr = jsdata.getJSONArray("district_list");
+                        for (int i = 0; i < jsAr.length(); i++) {
+                            Log.e("Level IDs ", "" + jsAr.getJSONObject(i).getString("district_id"));
+                            boolean isSuccess = DBOperation.insertDistrict(Booth_record.this, jsAr.getJSONObject(i).getString("district_id"), jsAr.getJSONObject(i).getString("district_name"));
+                            Log.e("Success", "" + isSuccess);
+                        }
+                        getLevleDB();
+                    } else {
+                        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
+
+                    }
+
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                prg.dismiss();
+
+                Log.e("Error :", error.toString());
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> params = new HashMap<String, String>();
+
+                params.put("action", Utils_url.Action_GetDistrict);
+                params.put("vistarak_id", SavedData.getUSER_NAME());
+
+                Log.e("Param Response ", "" + params);
+                return params;
+            }
+        };
+        AppController.getInstance().addToRequestQueue(stringRequest);
+
+    }
+
+
+    private void getLevleDB() {
+        LevelModals = DBOperation.getAlllevel(this);
+        if (LevelModals.size() > 0 && LevelModals != null) {
+            Log.e("in Database Calling", "in Database Calling  LEVEL");
+
+
+        } else {
+            Log.e("Have to get from server", "Have to get from server n  LEVEL");
+            getlevelFromServer();
+        }
+    }
+
+    private void getlevelFromServer() {
+
+        prg.setMessage("Get District");
+        prg.show();
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, Utils_url.Base_Url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                // Display the first 500 characters of the response string.
+                prg.dismiss();
+                Log.e("Response :", response);
+                //  Manage_data_login(response);
+                try {
+                    JSONObject jsdata = new JSONObject(response);
+                    String msg = jsdata.getString("msg");
+                    String status = jsdata.getString("status");
+                    SavedData.saveOperation_status(false);
+
+                    if (status.equalsIgnoreCase("1")) {
+                        JSONArray jsAr = jsdata.getJSONArray("level_list");
+                        for (int i = 0; i < jsAr.length(); i++) {
+
+                            Log.e("Level IDs ", "" + jsAr.getJSONObject(i).getString("level_id"));
+                            boolean isSuccess = DBOperation.insertlevel(Booth_record.this, jsAr.getJSONObject(i).getString("level_id"), jsAr.getJSONObject(i).getString("level_name"));
+                            Log.e("Success", "" + isSuccess);
+
+
+                        }
+
+                    } else {
+                        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
+
                     }
 
                 } catch (JSONException e) {
@@ -615,8 +718,9 @@ public class Booth_record extends RootActivity {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("action", Utils_url.Action_GetBooth);
-                params.put("userName", SavedData.getUSER_NAME());
+
+                params.put("action", Utils_url.Action_GetLevel);
+                params.put("vistarak_id", SavedData.getUSER_NAME());
 
                 Log.e("Param Response ", "" + params);
                 return params;
@@ -753,17 +857,16 @@ public class Booth_record extends RootActivity {
                         isprofileupload = false;*/
 
 
-                            STR_user_id = SavedData.getUSER_NAME();
-                            Log.e("pp","i m heree "+isprofileupload);
-                            if (!isprofileupload) {
-                                String device_id = DeviceOperation.getDeviceDetail(Booth_record.this);
-                                String emi_id ="";
-                                String fcmID = DeviceOperation.getFcmkey();
-                                getRecord(STR_user_id, deviceID, emi_id, fcmID);
+                        STR_user_id = SavedData.getUSER_NAME();
+                        Log.e("pp", "i m heree " + isprofileupload);
+                        if (!isprofileupload) {
+                            String device_id = DeviceOperation.getDeviceDetail(Booth_record.this);
+                            String emi_id = "";
+                            String fcmID = DeviceOperation.getFcmkey();
+                            getRecord(STR_user_id, deviceID, emi_id, fcmID);
 
-                            }
-                            isprofileupload = false;
-
+                        }
+                        isprofileupload = false;
 
 
                     }

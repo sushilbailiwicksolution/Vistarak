@@ -65,7 +65,7 @@ public class DashBoard_Activity extends RootActivity implements DatePickerDialog
     private static final long FASTEST_INTERVAL = 1000 * 5;
     final Calendar c = Calendar.getInstance();
     String TAG = getClass().getSimpleName();
-    CardView crd_booth_visit, crd_home_visit, crd_meeting_in_booth, key_voter_group, crd_download, crd_special_area, crd_wts_app_group, crd_swachta, crd_man_ki_baat, crd_log_out, crd_pradhan, crd_cometiee, crd_smart_user, crd_anusuchit, crd_event_president, crd_comitee_21;
+    CardView crd_booth_visit, crd_home_visit, crd_meeting_in_booth, key_voter_group, crd_download, crd_special_area, crd_wts_app_group, crd_swachta, crd_man_ki_baat, crd_log_out, crd_pradhan, crd_cometiee, crd_smart_user, crd_anusuchit, crd_event_president, crd_comitee_21,crd_shakti_kenra;
 
     int year = c.get(Calendar.YEAR);
     int month = c.get(Calendar.MONTH);
@@ -511,6 +511,15 @@ public class DashBoard_Activity extends RootActivity implements DatePickerDialog
 
             }
         });
+        crd_shakti_kenra.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(DashBoard_Activity.this, Shakti_Kendra.class);
+                startActivity(i);
+
+            }
+        });
+
         /*crd_benificary.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -918,6 +927,7 @@ public class DashBoard_Activity extends RootActivity implements DatePickerDialog
         crd_smart_user = (CardView) findViewById(R.id.crd_smart_user);
         crd_anusuchit = (CardView) findViewById(R.id.crd_anusuchit);
         crd_event_president = (CardView) findViewById(R.id.crd_event_president);
+        crd_shakti_kenra= (CardView) findViewById(R.id.crd_shakti_kenra);
 
         crd_comitee_21 = (CardView) findViewById(R.id.crd_comitee_21);
 

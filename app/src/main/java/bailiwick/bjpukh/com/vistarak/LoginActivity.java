@@ -57,6 +57,7 @@ import bailiwick.bjpukh.com.vistarak.Support.RootActivity;
 import bailiwick.bjpukh.com.vistarak.Support.SavedData;
 import bailiwick.bjpukh.com.vistarak.UtilsUrl.Utils_url;
 import bailiwick.bjpukh.com.vistarak.app.AppController;
+import bailiwick.bjpukh.com.vistarak.db.DBOperation;
 
 import static bailiwick.bjpukh.com.vistarak.Language.LanguageType.SelectedLanguage;
 
@@ -418,6 +419,12 @@ Log.e("i m heree","in login entry");
                                     SavedData.saveLeaveStatus(true);
 //                                    Intent i = new Intent(LoginActivity.this, Booth_record.class);
                                     //    SavedData.saveLogin(true);
+
+                                   boolean isDelete=DBOperation.deleteAll_District(LoginActivity.this);
+                                   Log.e("District Delete","District Delete : "+isDelete);
+                                    boolean islevelDelete=DBOperation.deleteAll_level(LoginActivity.this);
+                                    Log.e("level Delete","level Delete : "+islevelDelete);
+
                                     Intent i = new Intent(LoginActivity.this, OtpScreen.class);
                                     startActivity(i);
                                     finish();
@@ -452,7 +459,7 @@ Log.e("i m heree","in login entry");
                 params.put("cloudId", fcmid);
                 params.put("deviceId", device_id);
                 params.put("imeiNumber", "Imei");
-           //     Log.e("Param Response ", "" + params);
+                Log.e("Param Response ", "" + params);
                 return params;
             }
         };
@@ -517,8 +524,12 @@ Log.e("i m heree","in login entry");
         tinl_password = (TextInputLayout) findViewById(R.id.tinl_password);
         spinner_Language = (Spinner) findViewById(R.id.spinner_select_language);
 
-     //  edt_user_name.setText("VISTARAK29026");
-       // edt_password.setText("12345678");
+   //    edt_user_name.setText("VISTARAK35265");
+//        edt_user_name.setText("VISTARAK21486");
+
+
+     //  edt_password.setText("12345678");
+      //  edt_password.setText("123456");
 
         //9718800629
 

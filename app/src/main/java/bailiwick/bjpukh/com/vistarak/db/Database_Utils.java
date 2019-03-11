@@ -8,7 +8,7 @@ public class Database_Utils {
     // Databse name
     //  public static final String DB_NAME = "vistarak_newdecember_gen.sqlite";
     //  public static final String DB_NAME = "vistarak_feb_2018.sqlite";
-    public static final String DB_NAME = "vistarak_september_2018.sqlite";
+    public static final String DB_NAME = "vistarak_march_2019.sqlite";
 
 
     // table name
@@ -26,6 +26,9 @@ public class Database_Utils {
     public static final String Add_kameti_member_table = "tbl_kameti";
     public static final String Add_Anusuchit_member_table = "tbl_anusuchit_member";
     public static final String Add_Event_pramukh_table = "tbl_event_pramukh_member";
+
+    public static final String Table_Level = "tbl_level";
+    public static final String Table_district = "tbl_district";
 
 
     // key voter Table
@@ -130,4 +133,13 @@ public class Database_Utils {
     public static final String Area_type = "area_type";
 // Anusuchit Member
 public static final String Catagory = "catagory";
+
+// 05 march 2019 for Shakti Kendra
+public static final String district_id = "id";
+    public static final String district_name = "district_name";
+
+    public static final String level_id = "id";
+    public static final String level_name = "level_name";
+
+    // End ///
 }

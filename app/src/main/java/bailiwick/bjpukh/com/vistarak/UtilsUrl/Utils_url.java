@@ -5,7 +5,7 @@ package bailiwick.bjpukh.com.vistarak.UtilsUrl;
  */
 
 public class Utils_url {
-    public static final String Version_Code = "3.4";
+    public static final String Version_Code = "3.7";
 
     public static final String Base_Url = "http://vistarak.com/apis/apis.php";
     //  public static final String Base_Url = "http://103.206.248.234/vistarak/apis/apis.php";
@@ -28,8 +28,8 @@ public class Utils_url {
     public static final String Action_Panna_Pramukh_count = "getPannaPramukhCount";
     // 13 july 2018
     public static final String Action_AnusuchitActivityCount = "getAnusuchitActivityCount";
-// 22 octuber 2018
-public static final String Action_add_exisiting_member_varified="add_exisiting_member_varified";
+    // 22 octuber 2018
+    public static final String Action_add_exisiting_member_varified = "add_exisiting_member_varified";
 
 
     //   23/feb/2018 build 2.3
@@ -83,12 +83,21 @@ public static final String Action_add_exisiting_member_varified="add_exisiting_m
 
     ////////End/////
 
+    // 02 march 2019
+    public static final String Action_GetLevel = "getLevel";
+    public static final String Action_GetDistrict = "getDistrict";
+    public static final String Action_GetShaktiKendra = "getShaktiKendra";
+    public static final String Action_Add_Shakti_Kendra_adhyaksha = "add_Shakti_Kendra_adhyaksha";
 
+    public static final String Action_get_Shakti_Kendra_adhyaksha = "get_Shakti_Kendra_Details";
+
+
+
+// End///
 
 
     public static final String Action_SendMssage = "setVistarakMessage";
     public static final String Action_SendComplaint = "sendComplaintMsg";
-
 
 
 }

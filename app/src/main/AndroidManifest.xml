@@ -19,13 +19,13 @@
     <application
         android:name="bailiwick.bjpukh.com.vistarak.app.AppController"
         android:allowBackup="false"
-        tools:replace="android:allowBackup"
         android:icon="@mipmap/app_icon"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/app_icon"
         android:supportsRtl="true"
+        android:theme="@style/AppThemeFullscreen"
 
-        android:theme="@style/AppThemeFullscreen">
+        tools:replace="android:allowBackup">
         <activity android:name="bailiwick.bjpukh.com.vistarak.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -124,15 +124,21 @@
         <activity
             android:name="bailiwick.bjpukh.com.vistarak.AnusuchitReg"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
+            android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity
             android:name="bailiwick.bjpukh.com.vistarak.Event_Pradhan"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
+            android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity
             android:name="bailiwick.bjpukh.com.vistarak.Activity_ComiteeTWO_One"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <activity
+            android:name=".Shakti_Kendra"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
 
         <activity
             android:name=".GoogleMap.MapsActivity"

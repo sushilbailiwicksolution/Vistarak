@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -9,10 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
-
+        android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -889,6 +885,124 @@
             </android.support.v7.widget.CardView>
 
         </LinearLayout>
+
+        <!--01-march 2019 Prince-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:orientation="horizontal">
+            <!--Row one item 1-->
+            <android.support.v7.widget.CardView
+                android:id="@+id/crd_shakti_kenra"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:elevation="8dp"
+
+
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/box_selector"
+                    android:padding="5dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <ImageView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center|top"
+                            android:layout_weight="1"
+                            android:padding="0dp"
+
+                            android:src="@drawable/ic_shakt_kendra" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/dash_board_bottom_margin"
+                            android:gravity="center"
+                            android:text="Shakti Kendra"
+                            android:textColor="@color/color_black"
+                            android:textSize="15sp" />
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <!--Row one item 2-->
+            <android.support.v7.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:elevation="8dp"
+                android:visibility="gone"
+
+
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/box_selector"
+                    android:padding="5dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center|top"
+                            android:layout_weight="1"
+                            android:padding="0dp"
+
+                            android:src="@drawable/comite21" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/dash_board_bottom_margin"
+                            android:gravity="center"
+                            android:text="Booth Comitee"
+                            android:textColor="@color/color_black"
+                            android:textSize="15sp" />
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+
     </LinearLayout>
 
 

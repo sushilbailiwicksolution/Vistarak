@@ -9,15 +9,16 @@ import android.util.Log;
 
 import java.util.ArrayList;
 
-import bailiwick.bjpukh.com.vistarak.Event_Pradhan;
 import bailiwick.bjpukh.com.vistarak.Getter_Setter.AnusuchitModel;
 import bailiwick.bjpukh.com.vistarak.Getter_Setter.Army_Model;
 import bailiwick.bjpukh.com.vistarak.Getter_Setter.Bike_Model;
 import bailiwick.bjpukh.com.vistarak.Getter_Setter.BoothMeeting_modal;
 import bailiwick.bjpukh.com.vistarak.Getter_Setter.BoothSpinnerModal;
+import bailiwick.bjpukh.com.vistarak.Getter_Setter.District_model;
 import bailiwick.bjpukh.com.vistarak.Getter_Setter.Event_Pramukh_model;
 import bailiwick.bjpukh.com.vistarak.Getter_Setter.Home_visitModal;
 import bailiwick.bjpukh.com.vistarak.Getter_Setter.Influence_Model;
+import bailiwick.bjpukh.com.vistarak.Getter_Setter.Level_model;
 import bailiwick.bjpukh.com.vistarak.Getter_Setter.Man_Ki_BaatModal;
 import bailiwick.bjpukh.com.vistarak.Getter_Setter.Ngo_Model;
 import bailiwick.bjpukh.com.vistarak.Getter_Setter.PannaPramukhModel;
@@ -47,8 +48,7 @@ public class DBOperation {
             int len = cur.getCount();
             System.out.println("lenght " + len);
             if (len > 0) {
-                SharedPreferences pageNumPref = c.getSharedPreferences(
-                        PREFS_NAME, 0);
+                SharedPreferences pageNumPref = c.getSharedPreferences(PREFS_NAME, 0);
                 pageNumPref.edit().putInt("dbsize", len).commit();
             } else {
                 cur.close();
@@ -93,8 +93,7 @@ public class DBOperation {
             int len = cur.getCount();
             System.out.println("lenght " + len);
             if (len > 0) {
-                SharedPreferences pageNumPref = c.getSharedPreferences(
-                        PREFS_NAME, 0);
+                SharedPreferences pageNumPref = c.getSharedPreferences(PREFS_NAME, 0);
                 pageNumPref.edit().putInt("dbsize", len).commit();
             } else {
                 cur.close();
@@ -102,9 +101,7 @@ public class DBOperation {
             }
             cur.moveToNext();
             for (int i = 0; i < len; i++) {
-                boothSpinnerModals.add(new BoothSpinnerModal(cur.getString(cur.getColumnIndex(Database_Utils.Booth_BID)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Booth_name)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Booth_consistency))));
+                boothSpinnerModals.add(new BoothSpinnerModal(cur.getString(cur.getColumnIndex(Database_Utils.Booth_BID)), cur.getString(cur.getColumnIndex(Database_Utils.Booth_name)), cur.getString(cur.getColumnIndex(Database_Utils.Booth_consistency))));
 
                 Log.e("booth detail List", "" + cur.getString(cur.getColumnIndex(Database_Utils.Booth_name)));
                 cur.moveToNext();
@@ -183,8 +180,7 @@ public class DBOperation {
 
     // Insert_Man Ki Baat
 
-    public static boolean insertMan_ki_baat(Context c, String Vistarak_id, String booth_id, String man_pramaukh,
-                                            String lattitudeLocation, String longitudeLocation, String man_mobile) {
+    public static boolean insertMan_ki_baat(Context c, String Vistarak_id, String booth_id, String man_pramaukh, String lattitudeLocation, String longitudeLocation, String man_mobile) {
 
         DatabaseHelper dbhelperShopCart = new DatabaseHelper(c);
 
@@ -247,8 +243,7 @@ public class DBOperation {
             int len = cur.getCount();
             System.out.println("lenght " + len);
             if (len > 0) {
-                SharedPreferences pageNumPref = c.getSharedPreferences(
-                        PREFS_NAME, 0);
+                SharedPreferences pageNumPref = c.getSharedPreferences(PREFS_NAME, 0);
                 pageNumPref.edit().putInt("dbsize", len).commit();
             } else {
                 cur.close();
@@ -256,13 +251,7 @@ public class DBOperation {
             }
             cur.moveToNext();
             for (int i = 0; i < len; i++) {
-                ManKiBaatModals.add(new Man_Ki_BaatModal(cur.getString(cur.getColumnIndex(Database_Utils.Vistarak_id)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Booth_id)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.PramukhName)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Latitude)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Logitude)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.PramukhMobile)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Entry_no))));
+                ManKiBaatModals.add(new Man_Ki_BaatModal(cur.getString(cur.getColumnIndex(Database_Utils.Vistarak_id)), cur.getString(cur.getColumnIndex(Database_Utils.Booth_id)), cur.getString(cur.getColumnIndex(Database_Utils.PramukhName)), cur.getString(cur.getColumnIndex(Database_Utils.Latitude)), cur.getString(cur.getColumnIndex(Database_Utils.Logitude)), cur.getString(cur.getColumnIndex(Database_Utils.PramukhMobile)), cur.getString(cur.getColumnIndex(Database_Utils.Entry_no))));
 
                 Log.e("booth detail List", "" + cur.getString(cur.getColumnIndex(Database_Utils.PramukhName)));
                 cur.moveToNext();
@@ -382,8 +371,7 @@ public class DBOperation {
             int len = cur.getCount();
             System.out.println("lenght " + len);
             if (len > 0) {
-                SharedPreferences pageNumPref = c.getSharedPreferences(
-                        PREFS_NAME, 0);
+                SharedPreferences pageNumPref = c.getSharedPreferences(PREFS_NAME, 0);
                 pageNumPref.edit().putInt("dbsize", len).commit();
             } else {
                 cur.close();
@@ -391,12 +379,7 @@ public class DBOperation {
             }
             cur.moveToNext();
             for (int i = 0; i < len; i++) {
-                Swachta_Modals.add(new SwachtaModel(cur.getString(cur.getColumnIndex(Database_Utils.Vistarak_id)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Booth_id)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.PramukhName)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Latitude)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Logitude)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.PramukhMobile)),
+                Swachta_Modals.add(new SwachtaModel(cur.getString(cur.getColumnIndex(Database_Utils.Vistarak_id)), cur.getString(cur.getColumnIndex(Database_Utils.Booth_id)), cur.getString(cur.getColumnIndex(Database_Utils.PramukhName)), cur.getString(cur.getColumnIndex(Database_Utils.Latitude)), cur.getString(cur.getColumnIndex(Database_Utils.Logitude)), cur.getString(cur.getColumnIndex(Database_Utils.PramukhMobile)),
 
                         cur.getString(cur.getColumnIndex(Database_Utils.Entry_no))));
 
@@ -439,8 +422,7 @@ public class DBOperation {
 
     ///////////////////////////////////////
     // Insert_ panna Pramukh in Booth
-    public static boolean insertPannaPramukh_in_booth(Context c, String Vistarak_id, String booth_id, String man_pramaukh, String address,
-                                                      String lattitudeLocation, String longitudeLocation, String man_mobile) {
+    public static boolean insertPannaPramukh_in_booth(Context c, String Vistarak_id, String booth_id, String man_pramaukh, String address, String lattitudeLocation, String longitudeLocation, String man_mobile) {
 
         DatabaseHelper dbhelperShopCart = new DatabaseHelper(c);
 
@@ -505,8 +487,7 @@ public class DBOperation {
             int len = cur.getCount();
             System.out.println("lenght " + len);
             if (len > 0) {
-                SharedPreferences pageNumPref = c.getSharedPreferences(
-                        PREFS_NAME, 0);
+                SharedPreferences pageNumPref = c.getSharedPreferences(PREFS_NAME, 0);
                 pageNumPref.edit().putInt("dbsize", len).commit();
             } else {
                 cur.close();
@@ -514,13 +495,7 @@ public class DBOperation {
             }
             cur.moveToNext();
             for (int i = 0; i < len; i++) {
-                pannapramukh_Modals.add(new PannaPramukhModel(cur.getString(cur.getColumnIndex(Database_Utils.Vistarak_id)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Booth_id)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.PramukhName)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.MEM_address)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Latitude)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Logitude)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.PramukhMobile)),
+                pannapramukh_Modals.add(new PannaPramukhModel(cur.getString(cur.getColumnIndex(Database_Utils.Vistarak_id)), cur.getString(cur.getColumnIndex(Database_Utils.Booth_id)), cur.getString(cur.getColumnIndex(Database_Utils.PramukhName)), cur.getString(cur.getColumnIndex(Database_Utils.MEM_address)), cur.getString(cur.getColumnIndex(Database_Utils.Latitude)), cur.getString(cur.getColumnIndex(Database_Utils.Logitude)), cur.getString(cur.getColumnIndex(Database_Utils.PramukhMobile)),
 
                         cur.getString(cur.getColumnIndex(Database_Utils.Entry_no))));
 
@@ -594,7 +569,7 @@ public class DBOperation {
             newValues.put(Database_Utils.Logitude, longitudeLocation);
             newValues.put(Database_Utils.Catagory, catagory);
 
-          //  newValues.put(Database_Utils.MEM_address, address);
+            //  newValues.put(Database_Utils.MEM_address, address);
 
             newValues.put(Database_Utils.Entry_no, man_pramaukh + (len + 1));
 
@@ -631,8 +606,7 @@ public class DBOperation {
             int len = cur.getCount();
             System.out.println("lenght " + len);
             if (len > 0) {
-                SharedPreferences pageNumPref = c.getSharedPreferences(
-                        PREFS_NAME, 0);
+                SharedPreferences pageNumPref = c.getSharedPreferences(PREFS_NAME, 0);
                 pageNumPref.edit().putInt("dbsize", len).commit();
             } else {
                 cur.close();
@@ -640,14 +614,7 @@ public class DBOperation {
             }
             cur.moveToNext();
             for (int i = 0; i < len; i++) {
-                Anusuchit_Modals.add(new AnusuchitModel(cur.getString(cur.getColumnIndex(Database_Utils.Vistarak_id)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Booth_id)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.PramukhName)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Latitude)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Logitude)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.PramukhMobile)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Catagory)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Entry_no))));
+                Anusuchit_Modals.add(new AnusuchitModel(cur.getString(cur.getColumnIndex(Database_Utils.Vistarak_id)), cur.getString(cur.getColumnIndex(Database_Utils.Booth_id)), cur.getString(cur.getColumnIndex(Database_Utils.PramukhName)), cur.getString(cur.getColumnIndex(Database_Utils.Latitude)), cur.getString(cur.getColumnIndex(Database_Utils.Logitude)), cur.getString(cur.getColumnIndex(Database_Utils.PramukhMobile)), cur.getString(cur.getColumnIndex(Database_Utils.Catagory)), cur.getString(cur.getColumnIndex(Database_Utils.Entry_no))));
 
                 Log.e("booth detail List", "" + cur.getString(cur.getColumnIndex(Database_Utils.PramukhName)));
                 cur.moveToNext();
@@ -686,12 +653,8 @@ public class DBOperation {
     }
 
 
-
-
-
     // Insert_ Whats App group
-    public static boolean insertWhats_app(Context c, String Vistarak_id, String booth_id, String man_pramaukh,
-                                          String lattitudeLocation, String longitudeLocation, String man_mobile, String Group_name) {
+    public static boolean insertWhats_app(Context c, String Vistarak_id, String booth_id, String man_pramaukh, String lattitudeLocation, String longitudeLocation, String man_mobile, String Group_name) {
 
         DatabaseHelper dbhelperShopCart = new DatabaseHelper(c);
 
@@ -756,8 +719,7 @@ public class DBOperation {
             int len = cur.getCount();
             System.out.println("lenght " + len);
             if (len > 0) {
-                SharedPreferences pageNumPref = c.getSharedPreferences(
-                        PREFS_NAME, 0);
+                SharedPreferences pageNumPref = c.getSharedPreferences(PREFS_NAME, 0);
                 pageNumPref.edit().putInt("dbsize", len).commit();
             } else {
                 cur.close();
@@ -765,14 +727,7 @@ public class DBOperation {
             }
             cur.moveToNext();
             for (int i = 0; i < len; i++) {
-                Whats_AppModals.add(new Whats_AppModal(cur.getString(cur.getColumnIndex(Database_Utils.Vistarak_id)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Booth_id)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.PramukhName)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Latitude)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Logitude)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.PramukhMobile)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Group_name)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Entry_no))));
+                Whats_AppModals.add(new Whats_AppModal(cur.getString(cur.getColumnIndex(Database_Utils.Vistarak_id)), cur.getString(cur.getColumnIndex(Database_Utils.Booth_id)), cur.getString(cur.getColumnIndex(Database_Utils.PramukhName)), cur.getString(cur.getColumnIndex(Database_Utils.Latitude)), cur.getString(cur.getColumnIndex(Database_Utils.Logitude)), cur.getString(cur.getColumnIndex(Database_Utils.PramukhMobile)), cur.getString(cur.getColumnIndex(Database_Utils.Group_name)), cur.getString(cur.getColumnIndex(Database_Utils.Entry_no))));
 
                 Log.e("booth detail List", "" + cur.getString(cur.getColumnIndex(Database_Utils.PramukhName)));
                 cur.moveToNext();
@@ -866,8 +821,7 @@ public class DBOperation {
     }
 
     // insert Home Visit
-    public static boolean insertHomevisit(Context c, String user_name, String booth_id, String lattitudeLocation, String longitudeLocation, String family_head, String family_member, String address_member,
-                                          String membership_number, String voter_id, String visit_type, String membership_number1, String mobile) {
+    public static boolean insertHomevisit(Context c, String user_name, String booth_id, String lattitudeLocation, String longitudeLocation, String family_head, String family_member, String address_member, String membership_number, String voter_id, String visit_type, String membership_number1, String mobile) {
         DatabaseHelper dbhelperShopCart = new DatabaseHelper(c);
 
         Cursor cur = null;
@@ -938,8 +892,7 @@ public class DBOperation {
             int len = cur.getCount();
             System.out.println("lenght " + len);
             if (len > 0) {
-                SharedPreferences pageNumPref = c.getSharedPreferences(
-                        PREFS_NAME, 0);
+                SharedPreferences pageNumPref = c.getSharedPreferences(PREFS_NAME, 0);
                 pageNumPref.edit().putInt("dbsize", len).commit();
             } else {
                 cur.close();
@@ -948,20 +901,7 @@ public class DBOperation {
             cur.moveToNext();
             for (int i = 0; i < len; i++) {
 
-                HomeVisitModals.add(new Home_visitModal(cur.getString(cur.getColumnIndex(Database_Utils.Vistarak_id)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Booth_id)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Latitude)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Logitude)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Home_head_name)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Home_family_member)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Home_address)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Home_total_voter)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Home_head_voter_id)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Home_visitType)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Home_membership_id)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Entry_no)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Home_mobile))
-                ));
+                HomeVisitModals.add(new Home_visitModal(cur.getString(cur.getColumnIndex(Database_Utils.Vistarak_id)), cur.getString(cur.getColumnIndex(Database_Utils.Booth_id)), cur.getString(cur.getColumnIndex(Database_Utils.Latitude)), cur.getString(cur.getColumnIndex(Database_Utils.Logitude)), cur.getString(cur.getColumnIndex(Database_Utils.Home_head_name)), cur.getString(cur.getColumnIndex(Database_Utils.Home_family_member)), cur.getString(cur.getColumnIndex(Database_Utils.Home_address)), cur.getString(cur.getColumnIndex(Database_Utils.Home_total_voter)), cur.getString(cur.getColumnIndex(Database_Utils.Home_head_voter_id)), cur.getString(cur.getColumnIndex(Database_Utils.Home_visitType)), cur.getString(cur.getColumnIndex(Database_Utils.Home_membership_id)), cur.getString(cur.getColumnIndex(Database_Utils.Entry_no)), cur.getString(cur.getColumnIndex(Database_Utils.Home_mobile))));
 
                 Log.e("booth detail List", "" + cur.getString(cur.getColumnIndex(Database_Utils.Home_visitType)));
                 cur.moveToNext();
@@ -1064,8 +1004,7 @@ public class DBOperation {
             int len = cur.getCount();
             System.out.println("lenght " + len);
             if (len > 0) {
-                SharedPreferences pageNumPref = c.getSharedPreferences(
-                        PREFS_NAME, 0);
+                SharedPreferences pageNumPref = c.getSharedPreferences(PREFS_NAME, 0);
                 pageNumPref.edit().putInt("dbsize", len).commit();
             } else {
                 cur.close();
@@ -1073,13 +1012,7 @@ public class DBOperation {
             }
             cur.moveToNext();
             for (int i = 0; i < len; i++) {
-                SpecialAreaModals.add(new Special_AreaModal(cur.getString(cur.getColumnIndex(Database_Utils.Vistarak_id)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Booth_id)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Prior_Category)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Latitude)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Logitude)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.family_count)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Area_type)),
+                SpecialAreaModals.add(new Special_AreaModal(cur.getString(cur.getColumnIndex(Database_Utils.Vistarak_id)), cur.getString(cur.getColumnIndex(Database_Utils.Booth_id)), cur.getString(cur.getColumnIndex(Database_Utils.Prior_Category)), cur.getString(cur.getColumnIndex(Database_Utils.Latitude)), cur.getString(cur.getColumnIndex(Database_Utils.Logitude)), cur.getString(cur.getColumnIndex(Database_Utils.family_count)), cur.getString(cur.getColumnIndex(Database_Utils.Area_type)),
 
                         cur.getString(cur.getColumnIndex(Database_Utils.Entry_no))));
 
@@ -1185,8 +1118,7 @@ public class DBOperation {
             int len = cur.getCount();
             System.out.println("lenght " + len);
             if (len > 0) {
-                SharedPreferences pageNumPref = c.getSharedPreferences(
-                        PREFS_NAME, 0);
+                SharedPreferences pageNumPref = c.getSharedPreferences(PREFS_NAME, 0);
                 pageNumPref.edit().putInt("dbsize", len).commit();
             } else {
                 cur.close();
@@ -1196,17 +1128,7 @@ public class DBOperation {
             for (int i = 0; i < len; i++) {
 
 
-                NGOModals.add(new Ngo_Model(cur.getString(cur.getColumnIndex(Database_Utils.Vistarak_id)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Booth_id)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Latitude)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Logitude)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.VoterType)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.NG0_owner_name)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.NG0_name)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.NG0_area_of_work)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.NG0_affectivity)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.NG0_owner_mobile)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Entry_no))));
+                NGOModals.add(new Ngo_Model(cur.getString(cur.getColumnIndex(Database_Utils.Vistarak_id)), cur.getString(cur.getColumnIndex(Database_Utils.Booth_id)), cur.getString(cur.getColumnIndex(Database_Utils.Latitude)), cur.getString(cur.getColumnIndex(Database_Utils.Logitude)), cur.getString(cur.getColumnIndex(Database_Utils.VoterType)), cur.getString(cur.getColumnIndex(Database_Utils.NG0_owner_name)), cur.getString(cur.getColumnIndex(Database_Utils.NG0_name)), cur.getString(cur.getColumnIndex(Database_Utils.NG0_area_of_work)), cur.getString(cur.getColumnIndex(Database_Utils.NG0_affectivity)), cur.getString(cur.getColumnIndex(Database_Utils.NG0_owner_mobile)), cur.getString(cur.getColumnIndex(Database_Utils.Entry_no))));
 
                 Log.e("booth detail List", "" + cur.getString(cur.getColumnIndex(Database_Utils.NG0_name)));
                 cur.moveToNext();
@@ -1290,8 +1212,7 @@ public class DBOperation {
             int len = cur.getCount();
             System.out.println("lenght " + len);
             if (len > 0) {
-                SharedPreferences pageNumPref = c.getSharedPreferences(
-                        PREFS_NAME, 0);
+                SharedPreferences pageNumPref = c.getSharedPreferences(PREFS_NAME, 0);
                 pageNumPref.edit().putInt("dbsize", len).commit();
             } else {
                 cur.close();
@@ -1301,17 +1222,7 @@ public class DBOperation {
             for (int i = 0; i < len; i++) {
 
 
-                ReligiousModals.add(new Religious_Model(cur.getString(cur.getColumnIndex(Database_Utils.Vistarak_id)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Booth_id)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Latitude)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Logitude)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.VoterType)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Religious_owner_name)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Religious_name)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Religious_area_of_work)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Religious_affectivity)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Religious_owner_mobile)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Entry_no))));
+                ReligiousModals.add(new Religious_Model(cur.getString(cur.getColumnIndex(Database_Utils.Vistarak_id)), cur.getString(cur.getColumnIndex(Database_Utils.Booth_id)), cur.getString(cur.getColumnIndex(Database_Utils.Latitude)), cur.getString(cur.getColumnIndex(Database_Utils.Logitude)), cur.getString(cur.getColumnIndex(Database_Utils.VoterType)), cur.getString(cur.getColumnIndex(Database_Utils.Religious_owner_name)), cur.getString(cur.getColumnIndex(Database_Utils.Religious_name)), cur.getString(cur.getColumnIndex(Database_Utils.Religious_area_of_work)), cur.getString(cur.getColumnIndex(Database_Utils.Religious_affectivity)), cur.getString(cur.getColumnIndex(Database_Utils.Religious_owner_mobile)), cur.getString(cur.getColumnIndex(Database_Utils.Entry_no))));
 
                 Log.e("booth detail List", "" + cur.getString(cur.getColumnIndex(Database_Utils.Religious_owner_name)));
                 cur.moveToNext();
@@ -1394,8 +1305,7 @@ public class DBOperation {
             int len = cur.getCount();
             System.out.println("lenght " + len);
             if (len > 0) {
-                SharedPreferences pageNumPref = c.getSharedPreferences(
-                        PREFS_NAME, 0);
+                SharedPreferences pageNumPref = c.getSharedPreferences(PREFS_NAME, 0);
                 pageNumPref.edit().putInt("dbsize", len).commit();
             } else {
                 cur.close();
@@ -1405,16 +1315,7 @@ public class DBOperation {
             for (int i = 0; i < len; i++) {
 
 
-                ArmyModals.add(new Army_Model(cur.getString(cur.getColumnIndex(Database_Utils.Vistarak_id)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Booth_id)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Latitude)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Logitude)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.VoterType)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Army_person)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Army_total_family_member)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Army_retired_from)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Army_mobile)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Entry_no))));
+                ArmyModals.add(new Army_Model(cur.getString(cur.getColumnIndex(Database_Utils.Vistarak_id)), cur.getString(cur.getColumnIndex(Database_Utils.Booth_id)), cur.getString(cur.getColumnIndex(Database_Utils.Latitude)), cur.getString(cur.getColumnIndex(Database_Utils.Logitude)), cur.getString(cur.getColumnIndex(Database_Utils.VoterType)), cur.getString(cur.getColumnIndex(Database_Utils.Army_person)), cur.getString(cur.getColumnIndex(Database_Utils.Army_total_family_member)), cur.getString(cur.getColumnIndex(Database_Utils.Army_retired_from)), cur.getString(cur.getColumnIndex(Database_Utils.Army_mobile)), cur.getString(cur.getColumnIndex(Database_Utils.Entry_no))));
 
                 Log.e("booth detail List", "" + cur.getString(cur.getColumnIndex(Database_Utils.Army_person)));
                 cur.moveToNext();
@@ -1499,8 +1400,7 @@ public class DBOperation {
             int len = cur.getCount();
             System.out.println("lenght " + len);
             if (len > 0) {
-                SharedPreferences pageNumPref = c.getSharedPreferences(
-                        PREFS_NAME, 0);
+                SharedPreferences pageNumPref = c.getSharedPreferences(PREFS_NAME, 0);
                 pageNumPref.edit().putInt("dbsize", len).commit();
             } else {
                 cur.close();
@@ -1510,16 +1410,7 @@ public class DBOperation {
             for (int i = 0; i < len; i++) {
 
 
-                ShaheedModals.add(new Shaheed_Model(cur.getString(cur.getColumnIndex(Database_Utils.Vistarak_id)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Booth_id)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.VoterType)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Latitude)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Logitude)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Shaheed_name)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Shaheed_family_member)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Shaheed_retired_from)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Shaheed_mobile)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Shaheed_work_for)),
+                ShaheedModals.add(new Shaheed_Model(cur.getString(cur.getColumnIndex(Database_Utils.Vistarak_id)), cur.getString(cur.getColumnIndex(Database_Utils.Booth_id)), cur.getString(cur.getColumnIndex(Database_Utils.VoterType)), cur.getString(cur.getColumnIndex(Database_Utils.Latitude)), cur.getString(cur.getColumnIndex(Database_Utils.Logitude)), cur.getString(cur.getColumnIndex(Database_Utils.Shaheed_name)), cur.getString(cur.getColumnIndex(Database_Utils.Shaheed_family_member)), cur.getString(cur.getColumnIndex(Database_Utils.Shaheed_retired_from)), cur.getString(cur.getColumnIndex(Database_Utils.Shaheed_mobile)), cur.getString(cur.getColumnIndex(Database_Utils.Shaheed_work_for)),
 
                         cur.getString(cur.getColumnIndex(Database_Utils.Entry_no))));
 
@@ -1604,8 +1495,7 @@ public class DBOperation {
             int len = cur.getCount();
             System.out.println("lenght " + len);
             if (len > 0) {
-                SharedPreferences pageNumPref = c.getSharedPreferences(
-                        PREFS_NAME, 0);
+                SharedPreferences pageNumPref = c.getSharedPreferences(PREFS_NAME, 0);
                 pageNumPref.edit().putInt("dbsize", len).commit();
             } else {
                 cur.close();
@@ -1615,16 +1505,7 @@ public class DBOperation {
             for (int i = 0; i < len; i++) {
 
 
-                InfluenceModals.add(new Influence_Model(cur.getString(cur.getColumnIndex(Database_Utils.Vistarak_id)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Booth_id)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Latitude)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Logitude)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.VoterType)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.person_name)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Other_occupation)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Other_Affectivity)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Other_Mobile)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Entry_no))));
+                InfluenceModals.add(new Influence_Model(cur.getString(cur.getColumnIndex(Database_Utils.Vistarak_id)), cur.getString(cur.getColumnIndex(Database_Utils.Booth_id)), cur.getString(cur.getColumnIndex(Database_Utils.Latitude)), cur.getString(cur.getColumnIndex(Database_Utils.Logitude)), cur.getString(cur.getColumnIndex(Database_Utils.VoterType)), cur.getString(cur.getColumnIndex(Database_Utils.person_name)), cur.getString(cur.getColumnIndex(Database_Utils.Other_occupation)), cur.getString(cur.getColumnIndex(Database_Utils.Other_Affectivity)), cur.getString(cur.getColumnIndex(Database_Utils.Other_Mobile)), cur.getString(cur.getColumnIndex(Database_Utils.Entry_no))));
 
                 Log.e("booth detail List", "" + cur.getString(cur.getColumnIndex(Database_Utils.person_name)));
                 cur.moveToNext();
@@ -1726,8 +1607,7 @@ public class DBOperation {
             int len = cur.getCount();
             System.out.println("lenght " + len);
             if (len > 0) {
-                SharedPreferences pageNumPref = c.getSharedPreferences(
-                        PREFS_NAME, 0);
+                SharedPreferences pageNumPref = c.getSharedPreferences(PREFS_NAME, 0);
                 pageNumPref.edit().putInt("dbsize", len).commit();
             } else {
                 cur.close();
@@ -1737,17 +1617,9 @@ public class DBOperation {
             for (int i = 0; i < len; i++) {
 
 
-                BikeModals.add(new Bike_Model(cur.getString(cur.getColumnIndex(Database_Utils.Vistarak_id)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Booth_id)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.PramukhName)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.PramukhMobile)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Latitude)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Logitude)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.vechicle_no)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Entry_no))));
+                BikeModals.add(new Bike_Model(cur.getString(cur.getColumnIndex(Database_Utils.Vistarak_id)), cur.getString(cur.getColumnIndex(Database_Utils.Booth_id)), cur.getString(cur.getColumnIndex(Database_Utils.PramukhName)), cur.getString(cur.getColumnIndex(Database_Utils.PramukhMobile)), cur.getString(cur.getColumnIndex(Database_Utils.Latitude)), cur.getString(cur.getColumnIndex(Database_Utils.Logitude)), cur.getString(cur.getColumnIndex(Database_Utils.vechicle_no)), cur.getString(cur.getColumnIndex(Database_Utils.Entry_no))));
 
-                Log.e("booth detail List", "" + cur.getString(cur.getColumnIndex(Database_Utils.PramukhName
-                )));
+                Log.e("booth detail List", "" + cur.getString(cur.getColumnIndex(Database_Utils.PramukhName)));
                 cur.moveToNext();
 
                 //	System.out.println(data[i]);
@@ -1824,8 +1696,7 @@ public class DBOperation {
             int len = cur.getCount();
             System.out.println("lenght " + len);
             if (len > 0) {
-                SharedPreferences pageNumPref = c.getSharedPreferences(
-                        PREFS_NAME, 0);
+                SharedPreferences pageNumPref = c.getSharedPreferences(PREFS_NAME, 0);
                 pageNumPref.edit().putInt("dbsize", len).commit();
             } else {
                 cur.close();
@@ -1835,16 +1706,9 @@ public class DBOperation {
             for (int i = 0; i < len; i++) {
 
 
-                SmartPhoneModals.add(new SmartPhoneModel(cur.getString(cur.getColumnIndex(Database_Utils.Vistarak_id)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Booth_id)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.PramukhName)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Latitude)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Logitude)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.PramukhMobile)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Entry_no))));
+                SmartPhoneModals.add(new SmartPhoneModel(cur.getString(cur.getColumnIndex(Database_Utils.Vistarak_id)), cur.getString(cur.getColumnIndex(Database_Utils.Booth_id)), cur.getString(cur.getColumnIndex(Database_Utils.PramukhName)), cur.getString(cur.getColumnIndex(Database_Utils.Latitude)), cur.getString(cur.getColumnIndex(Database_Utils.Logitude)), cur.getString(cur.getColumnIndex(Database_Utils.PramukhMobile)), cur.getString(cur.getColumnIndex(Database_Utils.Entry_no))));
 
-                Log.e("booth detail List", "" + cur.getString(cur.getColumnIndex(Database_Utils.PramukhName
-                )));
+                Log.e("booth detail List", "" + cur.getString(cur.getColumnIndex(Database_Utils.PramukhName)));
                 cur.moveToNext();
 
                 //	System.out.println(data[i]);
@@ -1943,8 +1807,7 @@ public class DBOperation {
             int len = cur.getCount();
             System.out.println("lenght " + len);
             if (len > 0) {
-                SharedPreferences pageNumPref = c.getSharedPreferences(
-                        PREFS_NAME, 0);
+                SharedPreferences pageNumPref = c.getSharedPreferences(PREFS_NAME, 0);
                 pageNumPref.edit().putInt("dbsize", len).commit();
             } else {
                 cur.close();
@@ -1954,16 +1817,9 @@ public class DBOperation {
             for (int i = 0; i < len; i++) {
 
 
-                event_model.add(new Event_Pramukh_model(cur.getString(cur.getColumnIndex(Database_Utils.Vistarak_id)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Booth_id)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.PramukhName)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.PramukhMobile)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Latitude)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Logitude)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Entry_no))));
+                event_model.add(new Event_Pramukh_model(cur.getString(cur.getColumnIndex(Database_Utils.Vistarak_id)), cur.getString(cur.getColumnIndex(Database_Utils.Booth_id)), cur.getString(cur.getColumnIndex(Database_Utils.PramukhName)), cur.getString(cur.getColumnIndex(Database_Utils.PramukhMobile)), cur.getString(cur.getColumnIndex(Database_Utils.Latitude)), cur.getString(cur.getColumnIndex(Database_Utils.Logitude)), cur.getString(cur.getColumnIndex(Database_Utils.Entry_no))));
 
-                Log.e("booth detail List", "" + cur.getString(cur.getColumnIndex(Database_Utils.PramukhName
-                )));
+                Log.e("booth detail List", "" + cur.getString(cur.getColumnIndex(Database_Utils.PramukhName)));
                 cur.moveToNext();
 
                 //	System.out.println(data[i]);
@@ -1998,9 +1854,6 @@ public class DBOperation {
 
 
     }
-
-
-
 
 
     // Insert Kameti
@@ -2069,8 +1922,7 @@ public class DBOperation {
             int len = cur.getCount();
             System.out.println("lenght " + len);
             if (len > 0) {
-                SharedPreferences pageNumPref = c.getSharedPreferences(
-                        PREFS_NAME, 0);
+                SharedPreferences pageNumPref = c.getSharedPreferences(PREFS_NAME, 0);
                 pageNumPref.edit().putInt("dbsize", len).commit();
             } else {
                 cur.close();
@@ -2080,23 +1932,11 @@ public class DBOperation {
             for (int i = 0; i < len; i++) {
 
 
-                kametiList.add(new KametiModel(cur.getString(cur.getColumnIndex(Database_Utils.Vistarak_id)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Booth_id)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Latitude)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Logitude)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.kameti_Adyaksh_name)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.kameti_Adyaksh_mobile)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.kameti_palk_name)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.kameti_palak_mobile)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.kameti_BLA_name)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.kameti_BLA_mobile)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.kameti_Value_type)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Entry_no))
+                kametiList.add(new KametiModel(cur.getString(cur.getColumnIndex(Database_Utils.Vistarak_id)), cur.getString(cur.getColumnIndex(Database_Utils.Booth_id)), cur.getString(cur.getColumnIndex(Database_Utils.Latitude)), cur.getString(cur.getColumnIndex(Database_Utils.Logitude)), cur.getString(cur.getColumnIndex(Database_Utils.kameti_Adyaksh_name)), cur.getString(cur.getColumnIndex(Database_Utils.kameti_Adyaksh_mobile)), cur.getString(cur.getColumnIndex(Database_Utils.kameti_palk_name)), cur.getString(cur.getColumnIndex(Database_Utils.kameti_palak_mobile)), cur.getString(cur.getColumnIndex(Database_Utils.kameti_BLA_name)), cur.getString(cur.getColumnIndex(Database_Utils.kameti_BLA_mobile)), cur.getString(cur.getColumnIndex(Database_Utils.kameti_Value_type)), cur.getString(cur.getColumnIndex(Database_Utils.Entry_no))
 
                 ));
 
-                Log.e("booth detail List", "" + cur.getString(cur.getColumnIndex(Database_Utils.PramukhName
-                )));
+                Log.e("booth detail List", "" + cur.getString(cur.getColumnIndex(Database_Utils.PramukhName)));
                 cur.moveToNext();
 
                 //	System.out.println(data[i]);
@@ -2200,8 +2040,7 @@ public class DBOperation {
             int len = cur.getCount();
             System.out.println("lenght " + len);
             if (len > 0) {
-                SharedPreferences pageNumPref = c.getSharedPreferences(
-                        PREFS_NAME, 0);
+                SharedPreferences pageNumPref = c.getSharedPreferences(PREFS_NAME, 0);
                 pageNumPref.edit().putInt("dbsize", len).commit();
             } else {
                 cur.close();
@@ -2211,19 +2050,9 @@ public class DBOperation {
             for (int i = 0; i < len; i++) {
 
 
-                MeetingModals.add(new BoothMeeting_modal(cur.getString(cur.getColumnIndex(Database_Utils.Vistarak_id)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Booth_id)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Latitude)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Logitude)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Home_male_member)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Home_female_member)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Home_total_member)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Entry_no)),
-                        cur.getString(cur.getColumnIndex(Database_Utils.Home_image_name)),
-                        cur.getBlob(cur.getColumnIndex(Database_Utils.Home_image_path))));
+                MeetingModals.add(new BoothMeeting_modal(cur.getString(cur.getColumnIndex(Database_Utils.Vistarak_id)), cur.getString(cur.getColumnIndex(Database_Utils.Booth_id)), cur.getString(cur.getColumnIndex(Database_Utils.Latitude)), cur.getString(cur.getColumnIndex(Database_Utils.Logitude)), cur.getString(cur.getColumnIndex(Database_Utils.Home_male_member)), cur.getString(cur.getColumnIndex(Database_Utils.Home_female_member)), cur.getString(cur.getColumnIndex(Database_Utils.Home_total_member)), cur.getString(cur.getColumnIndex(Database_Utils.Entry_no)), cur.getString(cur.getColumnIndex(Database_Utils.Home_image_name)), cur.getBlob(cur.getColumnIndex(Database_Utils.Home_image_path))));
 
-                Log.e("booth detail List", "" + cur.getString(cur.getColumnIndex(Database_Utils.Home_male_member
-                )));
+                Log.e("booth detail List", "" + cur.getString(cur.getColumnIndex(Database_Utils.Home_male_member)));
                 cur.moveToNext();
 
                 //	System.out.println(data[i]);
@@ -2254,8 +2083,7 @@ public class DBOperation {
             int len = cur.getCount();
             System.out.println("lenght  " + len);
             if (len > 0) {
-                SharedPreferences pageNumPref = c.getSharedPreferences(
-                        PREFS_NAME, 0);
+                SharedPreferences pageNumPref = c.getSharedPreferences(PREFS_NAME, 0);
                 pageNumPref.edit().putInt("dbsize", len).commit();
             } else {
                 cur.close();
@@ -2287,14 +2115,12 @@ public class DBOperation {
             dbhelperShopCart.createDataBase();
             SQLiteDatabase database = DatabaseHelper.openDataBase();
             {
-                cur = database.rawQuery(
-                        "select Quotes from LoveQuotes where isFav=1", null);
+                cur = database.rawQuery("select Quotes from LoveQuotes where isFav=1", null);
             }
             int len = cur.getCount();
             System.out.println("lenght " + len);
             if (len > 0) {
-                SharedPreferences pageNumPref = c.getSharedPreferences(
-                        PREFS_NAME, 0);
+                SharedPreferences pageNumPref = c.getSharedPreferences(PREFS_NAME, 0);
                 pageNumPref.edit().putInt("dbsize", len).commit();
             } else {
                 cur.close();
@@ -2328,8 +2154,7 @@ public class DBOperation {
             int len = cur.getCount();
             System.out.println("lenght " + len);
             if (len > 0) {
-                SharedPreferences pageNumPref = c.getSharedPreferences(
-                        PREFS_NAME, 0);
+                SharedPreferences pageNumPref = c.getSharedPreferences(PREFS_NAME, 0);
                 pageNumPref.edit().putInt("dbsize", len).commit();
             } else {
                 cur.close();
@@ -2362,8 +2187,7 @@ public class DBOperation {
             dbhelperShopCart.createDataBase();
             SQLiteDatabase database = DatabaseHelper.openDataBase();
             {
-                cur = database.rawQuery("select * from LoveQuotes where ID='"
-                        + id + "'", null);
+                cur = database.rawQuery("select * from LoveQuotes where ID='" + id + "'", null);
             }
             int len = cur.getCount();
             System.out.println("lenght " + len);
@@ -2400,9 +2224,7 @@ public class DBOperation {
             dbhelperShopCart.createDataBase();
             SQLiteDatabase database = DatabaseHelper.openDataBase();
             {
-                cur = database.rawQuery(
-                        "select Quotes from LoveQuotes where ID='" + id + "'",
-                        null);
+                cur = database.rawQuery("select Quotes from LoveQuotes where ID='" + id + "'", null);
             }
             int len = cur.getCount();
             System.out.println("lenght " + len);
@@ -2436,8 +2258,7 @@ public class DBOperation {
             dbhelperShopCart.createDataBase();
             SQLiteDatabase database = DatabaseHelper.openDataBase();
             {
-                cur = database.rawQuery(
-                        "select * from LoveQuotes where isFav=1", null);
+                cur = database.rawQuery("select * from LoveQuotes where isFav=1", null);
             }
             int len = cur.getCount();
             System.out.println("lenght " + len);
@@ -2523,6 +2344,202 @@ public class DBOperation {
 
 
     }
+///////////////DISTRICT DATA/////////////////////
+    // insert District
+    public static boolean insertDistrict(Context c, String district_id, String district_name) {
 
+        DatabaseHelper dbhelperShopCart = new DatabaseHelper(c);
+
+        Cursor cur = null;
+
+        try {
+            dbhelperShopCart.createDataBase();
+            SQLiteDatabase database = DatabaseHelper.openDataBase();
+
+            cur = database.rawQuery("select * from " + Database_Utils.Table_district, null);
+
+
+            int len = cur.getCount();
+            System.out.println("lenght " + len);
+
+            ContentValues newValues = new ContentValues();
+            // Assign values for each row.
+            Log.e("id", district_id);
+            Log.e("district_name", district_name);
+
+            newValues.put(Database_Utils.district_id, district_id);
+            newValues.put(Database_Utils.district_name, district_name);
+
+            // Insert the row into your table
+            database.insert(Database_Utils.Table_district, null, newValues);
+            ///Toast.makeText(context, "Reminder Is Successfully Saved", Toast.LENGTH_LONG).show();
+
+
+            //	database.execSQL(sql);
+            database.close();
+            DatabaseHelper.closedatabase();
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+
+
+    }
+// Get District
+    public static ArrayList<District_model> getAllDistrict(Context c) {
+        DatabaseHelper dbhelperShopCart = new DatabaseHelper(c);
+        Cursor cur = null;
+        ArrayList<District_model> boothSpinnerModals;
+        boothSpinnerModals = new ArrayList<>();
+        try {
+            dbhelperShopCart.createDataBase();
+            SQLiteDatabase database = DatabaseHelper.openDataBase();
+            {
+                //cur = database.rawQuery("select Quotes from LoveQuotes where isFav =1", null);
+                cur = database.rawQuery("select * from " + Database_Utils.Table_district, null);
+
+            }
+            int len = cur.getCount();
+            System.out.println("lenght " + len);
+            if (len > 0) {
+                SharedPreferences pageNumPref = c.getSharedPreferences(PREFS_NAME, 0);
+                pageNumPref.edit().putInt("dbsize", len).commit();
+            } else {
+                cur.close();
+                DatabaseHelper.closedatabase();
+            }
+            cur.moveToNext();
+            for (int i = 0; i < len; i++) {
+                boothSpinnerModals.add(new District_model(cur.getString(cur.getColumnIndex(Database_Utils.district_id)),
+                        cur.getString(cur.getColumnIndex(Database_Utils.district_name))));
+                Log.e("District detail List", "" + cur.getString(cur.getColumnIndex(Database_Utils.district_name)));
+                cur.moveToNext();
+
+                //	System.out.println(data[i]);
+
+            }
+            cur.close();
+            DatabaseHelper.closedatabase();
+            return boothSpinnerModals;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+    // Delete District
+    public static boolean deleteAll_District(Context c) {
+        DatabaseHelper dbhelperShopCart = new DatabaseHelper(c);
+        try {
+            dbhelperShopCart.createDataBase();
+            SQLiteDatabase database = DatabaseHelper.openDataBase();
+
+            String sql = "delete from " + Database_Utils.Table_district;
+            database.execSQL(sql);
+            database.close();
+            DatabaseHelper.closedatabase();
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    ///////////////Level DATA/////////////////////
+    // insert level
+    public static boolean insertlevel(Context c, String level_id, String level_name) {
+
+        DatabaseHelper dbhelperShopCart = new DatabaseHelper(c);
+
+        Cursor cur = null;
+
+        try {
+            dbhelperShopCart.createDataBase();
+            SQLiteDatabase database = DatabaseHelper.openDataBase();
+
+            cur = database.rawQuery("select * from " + Database_Utils.Table_Level, null);
+
+
+            int len = cur.getCount();
+            System.out.println("lenght " + len);
+
+            ContentValues newValues = new ContentValues();
+            // Assign values for each row.
+            Log.e("id", level_id);
+            Log.e("level_name", level_name);
+
+            newValues.put(Database_Utils.level_id, level_id);
+            newValues.put(Database_Utils.level_name, level_name);
+
+            // Insert the row into your table
+            database.insert(Database_Utils.Table_Level, null, newValues);
+            ///Toast.makeText(context, "Reminder Is Successfully Saved", Toast.LENGTH_LONG).show();
+
+
+            //	database.execSQL(sql);
+            database.close();
+            DatabaseHelper.closedatabase();
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+
+
+    }
+    // Get level
+    public static ArrayList<Level_model> getAlllevel(Context c) {
+        DatabaseHelper dbhelperShopCart = new DatabaseHelper(c);
+        Cursor cur = null;
+        ArrayList<Level_model> boothSpinnerModals;
+        boothSpinnerModals = new ArrayList<>();
+        try {
+            dbhelperShopCart.createDataBase();
+            SQLiteDatabase database = DatabaseHelper.openDataBase();
+            {
+                //cur = database.rawQuery("select Quotes from LoveQuotes where isFav =1", null);
+                cur = database.rawQuery("select * from " + Database_Utils.Table_Level, null);
+
+            }
+            int len = cur.getCount();
+            System.out.println("lenght " + len);
+            if (len > 0) {
+                SharedPreferences pageNumPref = c.getSharedPreferences(PREFS_NAME, 0);
+                pageNumPref.edit().putInt("dbsize", len).commit();
+            } else {
+                cur.close();
+                DatabaseHelper.closedatabase();
+            }
+            cur.moveToNext();
+            for (int i = 0; i < len; i++) {
+                boothSpinnerModals.add(new Level_model(cur.getString(cur.getColumnIndex(Database_Utils.level_id)),
+                        cur.getString(cur.getColumnIndex(Database_Utils.level_name))));
+                Log.e("Level detail List", "" + cur.getString(cur.getColumnIndex(Database_Utils.level_name)));
+                cur.moveToNext();
+
+                //	System.out.println(data[i]);
+
+            }
+            cur.close();
+            DatabaseHelper.closedatabase();
+            return boothSpinnerModals;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+    // Delete Level
+    public static boolean deleteAll_level(Context c) {
+        DatabaseHelper dbhelperShopCart = new DatabaseHelper(c);
+        try {
+            dbhelperShopCart.createDataBase();
+            SQLiteDatabase database = DatabaseHelper.openDataBase();
+
+            String sql = "delete from " + Database_Utils.Table_Level;
+            database.execSQL(sql);
+            database.close();
+            DatabaseHelper.closedatabase();
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
 
 }

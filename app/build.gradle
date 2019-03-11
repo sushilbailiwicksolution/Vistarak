@@ -15,8 +15,8 @@ android {
         applicationId "bailiwick.bjpukh.com.vistarak"
         minSdkVersion 15
         targetSdkVersion 27
-        versionCode 29
-        versionName "2.9.8"
+        versionCode 32
+        versionName "3.0.2"
         /* multiDexEnabled true*/
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
